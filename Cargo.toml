@@ -12,6 +12,7 @@ description = "A simple implementation of egui for ggez"
 
 [dependencies]
 egui = "0.26.2"
+egui_extras = { version = "0.26.2", features = ["all_loaders"] }
 ggez = "0.9.1"
 
 [dev-dependencies]

@@ -95,10 +95,15 @@ impl Gui {
 		let mut input = Input::default();
 		let (w, h) = ctx.gfx.size();
 		input.set_scale_factor(1.0, (w, h));
-		Self {
+		
+		let gui = Self {
 			input,
 			..Default::default()
-		}
+		};
+		
+		egui_extras::install_image_loaders(&gui.context);
+
+		return gui;
 	}
 
 	pub fn update(&mut self, ctx: &mut ggez::Context) {
